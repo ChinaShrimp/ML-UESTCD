@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "datalab"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -65,18 +65,5 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get install -y wget curl
-    sudo wget http://mirrors.163.com/.help/sources.list.trusty -O /etc/apt/sources.list
-    sudo apt-get update
-    sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 \
-      software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository \
-      "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
-      $(lsb_release -cs) \
-      stable"
-    sudo apt-get update
-    sudo apt-get install -y docker-ce
-    sudo gpasswd -a vagrant docker
   SHELL
 end
