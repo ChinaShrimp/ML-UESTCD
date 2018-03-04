@@ -9,22 +9,23 @@
 ## 下载文件
 百度网盘链接：
 ```
-
+链接: https://pan.baidu.com/s/1jJYNEom 
+密码: aabv
 ```
 将上述链接中的文件下载到宿主机
 
 # 创建虚拟机
 ## 导入datalab.box：
+`datalab.box`位于上述百度网盘链接中的`Vagrant/Images/datalab`目录中。
 ```
-cd <包含的目录>
+cd <包含datalab.box的目录>
 vagrant box add --provider virtualbox --name datalab datalab.box
 ```
 
 ## 启动虚拟机
-`Vagrantfile`在上述百度网盘地址所指定的`datalab`目录中：
+`Vagrantfile`在上述百度网盘地址所指定的`datalabvm`目录中：
 ```
 cd <包含Vagrantfile的目录>
-vagrant box add --provider virtualbox --name datalab datalab.box
 vagrant up
 ```
 
