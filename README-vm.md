@@ -3,6 +3,8 @@
 ## 下载
 百度网盘地址
 ```
+链接: https://pan.baidu.com/s/1jJYNEom 
+密码: aabv
 ```
 
 ## 安装虚拟机软件
@@ -27,7 +29,7 @@ sudo apt-get update
 
 # 安装docker依赖的软件包
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 \
-      software-properties-common    gpasswd add -a vagrant docker
+      software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
       "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
