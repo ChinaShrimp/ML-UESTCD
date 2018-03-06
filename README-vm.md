@@ -37,7 +37,8 @@ sudo add-apt-repository \
       stable"
 sudo apt-get update
 sudo apt-get install -y docker-ce
-sudo gpasswd -a vagrant docker
+# 如果你使用root用户，不用执行下面的命令。
+sudo gpasswd -a <虚拟机登陆的用户名> docker
 ```
 
 # 3. 启动datalab
