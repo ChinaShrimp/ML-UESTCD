@@ -48,7 +48,10 @@ ssh登陆部署好的虚拟机，**确保虚拟机能够访问互联网**，之�
 docker pull registry.cn-hangzhou.aliyuncs.com/oedu/datalab:local-20180214
 
 cd $HOME
-git clone https://github.com/ChinaShrimp/ML-UESTCD.git
+mkdir -p datalab
+cd $HOME/datalab
+git clone -n --single-branch https://github.com/googledatalab/notebooks.git docs
+git clone https://github.com/ChinaShrimp/ML-UESTCD.git notebooks
 
 # 启动过程中会同步github仓库，会耗时，耐心
 docker run -itd -p "0.0.0.0:8081:8080" -v "${HOME}:/content" \
